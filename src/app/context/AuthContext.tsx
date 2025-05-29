@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [notes, setNotes] = useState<Note[]>([])
   const router = useRouter()
 
-  // Load user & notes from localStorage
+  
   useEffect(() => {
     const storedUser = localStorage.getItem('keeperUser')
     const storedNotes = localStorage.getItem('keeperNotes')
@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   }, [notes])
 
   const signin = (username: string, password: string) => {
-    // Password check using env variable (simulate)
+    
     const ENV_PASS = process.env.NEXT_PUBLIC_PASSWORD || 'keeper123'
     if (password === ENV_PASS && username.trim()) {
       setUser(username.trim())
@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   }
 
   const signup = (username: string, password: string) => {
-    // Password requirement from env (simulate)
+    
     const ENV_PASS = process.env.NEXT_PUBLIC_PASSWORD || 'keeper123'
     if (password === ENV_PASS && username.trim()) {
       setUser(username.trim())

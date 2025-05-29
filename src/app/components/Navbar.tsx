@@ -14,7 +14,7 @@ export default function Navbar() {
         <Link href="/home" className="hover:underline">Home</Link>
           <Link href="/about" className="hover:underline">About</Link>
           <Link href="/notes" className="hover:underline">Notes</Link>
-          <Link href="/account" className="hover:underline">Account</Link>
+          <Link href="/Account" className="hover:underline">Account</Link>
           {user ? (
             <button
               onClick={signout}

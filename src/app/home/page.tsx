@@ -55,7 +55,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-yellow-100 p-6 relative">
       <h2 className="text-2xl font-bold text-gray-800 mb-8">Good Morning {user}!</h2>
 
-      {/* Floating Add Note Button */}
+    
       <button
         onClick={() => setShowModal(true)}
         className="fixed bottom-6 right-6 bg-orange-500 text-white text-2xl w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-orange-600"
@@ -111,7 +111,7 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* Notes List */}
+      
       <section className="mt-10">
         <h3 className="text-xl font-semibold mb-4">Your Notes</h3>
         {notes.length === 0 && (
@@ -123,7 +123,7 @@ export default function HomePage() {
               key={note.id}
               className="relative bg-white border border-gray-300 rounded-lg shadow-md p-4"
             >
-              {/* Cross delete button */}
+            
               <button
                 onClick={() => deleteNote(note.id)}
                 className="absolute top-2 right-2 text-red-500 text-lg font-bold hover:text-red-700"
